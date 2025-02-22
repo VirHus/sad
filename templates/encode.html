@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="encode-container">
+        <h2>Encode a Document in Audio</h2>
+        <p>Securely hide your confidential documents inside an audio file.</p>
+
+        <form action="/encode" method="post" enctype="multipart/form-data">
+            <label for="audio">Select an Audio File:</label>
+            <input type="file" id="audio" name="audio" accept=".wav,.mp3" required>
+
+            <label for="document">Select a Document:</label>
+            <input type="file" id="document" name="document" accept=".txt,.docx,.pdf,.pptx,.xlsx" required>
+
+            <button type="submit">Encode Now</button>
+        </form>
+    </div>
+{% endblock %}

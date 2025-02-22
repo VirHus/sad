@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="home-container">
+        <h1>Welcome to Audio Steganography</h1>
+        <p>
+            Our system allows you to securely hide confidential documents within audio files using advanced 
+            <strong>Audio Steganography</strong> techniques, specifically leveraging the <strong>XOR Method</strong>.
+        </p>
+
+        <div class="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>🔒 **Secure Document Encoding** - Hide text, PDFs, and documents inside audio files.</li>
+                <li>🎵 **Audio Integrity Maintained** - The hidden message does not alter the perceptual quality of the audio.</li>
+                <li>🔑 **XOR-Based Encryption** - Uses XOR operations for added security during encoding and decoding.</li>
+                <li>💻 **User-Friendly Interface** - Simple, easy-to-use dashboard for encoding and decoding files.</li>
+                <li>🌐 **Web-Based Application** - Access it anywhere, no need for additional software.</li>
+            </ul>
+        </div>
+
+        <div class="get-started">
+            <h2>How It Works</h2>
+            <ol>
+                <li><strong>Encode:</strong> Upload an audio file and a document, and let our system embed the document inside the audio.</li>
+                <li><strong>Decode:</strong> Upload the encoded audio to extract the hidden document.</li>
+                <li><strong>Security:</strong> Your files remain confidential, and only authorized users can extract data.</li>
+            </ol>
+        </div>
+
+        <div class="cta">
+            <a href="/encode" class="btn">Start Encoding</a>
+            <a href="/decode" class="btn">Start Decoding</a>
+        </div>
+    </div>
+{% endblock %}

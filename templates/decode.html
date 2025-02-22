@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="decode-container">
+        <h2>Decode a Document from Audio</h2>
+        <p>Extract hidden confidential documents from an encoded audio file.</p>
+
+        <form action="/decode" method="POST" enctype="multipart/form-data">
+            <label for="encoded_audio">Select an Encoded Audio File:</label>
+            <input type="file" id="encoded_audio" name="encoded_audio" accept=".wav" required>
+
+            <button type="submit">Decode Now</button>
+        </form>
+    </div>
+{% endblock %}

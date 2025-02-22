@@ -6,33 +6,101 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: #f4f4f4;
+    height: 100vh;
 }
 
-/* Container for Layout */
-.container {
-    display: flex;
-    width: 80%;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Left Dashboard */
+/* Dashboard Sidebar */
 .dashboard {
-    width: 30%;
-    padding: 20px;
+    width: 280px;
     background-color: #2c3e50;
     color: white;
-    border-radius: 10px 0 0 10px;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Dashboard Header */
 .dashboard h2 {
-    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 22px;
 }
 
+/* Dashboard Navigation */
+.dashboard ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.dashboard ul li {
+    width: 100%;
+    margin: 10px 0;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Navigation Links */
+.dashboard ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.dashboard ul li:hover a {
+    background-color: #1abc9c;
+}
+
+/* Active Link */
+.dashboard ul li.active a {
+    background-color: #16a085;
+}
+
+/* Logout Button */
+.logout-button {
+    margin-top: auto;
+    padding: 12px;
+    width: 100%;
+    text-align: center;
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard {
+        width: 220px;
+    }
+
+    .dashboard ul li a {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Logout Button */
 .logout-button {
     display: inline-block;
     margin-top: 15px;
@@ -47,30 +115,58 @@ body {
     background-color: #c0392b;
 }
 
-/* Right Encryption Section */
-.encryption {
-    width: 70%;
+/* Main Content Container */
+.container {
+    margin-left: 270px;
     padding: 20px;
-    border-radius: 0 10px 10px 0;
-    background-color: white;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.encode-container {
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 h2 {
-    color: #333;
+    color: #2c3e50;
 }
 
-/* Form Styling */
+p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
 form {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
 }
 
 input[type="file"] {
-    display: block;
-    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
 }
 
 button {
-    padding: 10px 15px;
+    padding: 10px;
     background-color: #3498db;
     color: white;
     border: none;
@@ -102,4 +198,102 @@ button:hover {
     margin-top: 10px;
 }
 
-  
+.home-container {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+.features, .get-started {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.features ul, .get-started ol {
+    list-style: none;
+    padding: 0;
+}
+
+.features ul li, .get-started ol li {
+    background: #ecf0f1;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.cta {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+
+.decode-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #2c3e50;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+}
+
+input[type="file"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+button {
+    padding: 10px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #d35400;
+}
